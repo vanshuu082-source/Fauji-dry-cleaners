@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fauji Dry Cleaners - Professional Dry Cleaning Services in Najafgarh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%, #f8fafc 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            cursor: default;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cursor-pointer:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .hover-rotate:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .interactive-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6); }
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(30,58,138,0.95) 0%, rgba(55,65,81,0.95) 50%, rgba(17,24,39,0.95) 100%),
+                        url('https://images.unsplash.com/photo-1489274495757-95c7c837b101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+
+        .section-bg {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .military-logo {
+            background: linear-gradient(45deg, #1e3a8a, #374151, #d97706);
+            border: 2px solid #fbbf24;
+        }
+
+        .professional-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #374151 50%, #059669 100%);
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 military-logo rounded-lg flex items-center justify-center shadow-lg floating-animation pulse-glow hover-rotate cursor-pointer">
+                        <svg class="w-8 h-8 text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
+                            <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold text-gray-800">Fauji Dry Cleaners</span>
+                        <div class="text-xs text-gray-600 font-medium">Professional Military Precision</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-700 font-medium transition-colors hover:bg-blue-50 px-4 py-2 rounded-lg border-b-2 border-transparent hover:border-blue-700 cursor-pointer">Home</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-700 font-medium transition-colors hover:bg-blue-50 px-4 py-2 rounded-lg border-b-2 border-transparent hover:border-blue-700 cursor-pointer">Services</a>
+                    <a href="#pricing" class="nav-link text-gray-700 hover:text-blue-700 font-medium transition-colors hover:bg-blue-50 px-4 py-2 rounded-lg border-b-2 border-transparent hover:border-blue-700 cursor-pointer">Pricing</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-blue-700 font-medium transition-colors hover:bg-blue-50 px-4 py-2 rounded-lg border-b-2 border-transparent hover:border-blue-700 cursor-pointer">Gallery</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-700 font-medium transition-colors hover:bg-blue-50 px-4 py-2 rounded-lg border-b-2 border-transparent hover:border-blue-700 cursor-pointer">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-700 font-medium transition-colors hover:bg-blue-50 px-4 py-2 rounded-lg border-b-2 border-transparent hover:border-blue-700 cursor-pointer">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+                Fauji Dry Cleaners
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
+                Professional Dry Cleaning Services in Najafgarh, Delhi<br>
+                Quality Care for Your Precious Garments
+            </p>
+            <a href="#contact" class="bg-gradient-to-r from-blue-600 via-gray-700 to-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:via-gray-800 hover:to-green-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center space-x-3 animate-fade-in border border-yellow-400 cursor-pointer hover-glow floating-animation">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>Get Free Pickup</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 section-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Premium Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    We provide comprehensive dry cleaning and laundry services with professional military precision
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card interactive-card bg-gradient-to-br from-slate-700 to-slate-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl border border-blue-200">
+                    <div class="text-4xl mb-4 hover-scale cursor-pointer">👔</div>
+                    <h3 class="text-xl font-semibold mb-3">Men's Clothing</h3>
+                    <p class="text-slate-200">Professional dry cleaning for suits, shirts, trousers, and all men's formal and casual wear</p>
+                </div>
+                
+                <div class="service-card interactive-card bg-gradient-to-br from-blue-700 to-blue-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl border border-blue-200">
+                    <div class="text-4xl mb-4 hover-scale cursor-pointer">👗</div>
+                    <h3 class="text-xl font-semibold mb-3">Women's Clothing</h3>
+                    <p class="text-blue-100">Expert care for dresses, sarees, suits, and delicate women's garments with special attention</p>
+                </div>
+                
+                <div class="service-card interactive-card bg-gradient-to-br from-green-700 to-green-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl border border-green-200">
+                    <div class="text-4xl mb-4 hover-scale cursor-pointer">🏠</div>
+                    <h3 class="text-xl font-semibold mb-3">Household Items</h3>
+                    <p class="text-green-100">Curtains, bed sheets, blankets, and other household textiles cleaned to perfection</p>
+                </div>
+                
+                <div class="service-card interactive-card bg-gradient-to-br from-gray-700 to-gray-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl border border-yellow-200">
+                    <div class="text-4xl mb-4 hover-scale cursor-pointer">🧵</div>
+                    <h3 class="text-xl font-semibold mb-3">Raffu (Mending)</h3>
+                    <p class="text-gray-200">Expert mending and repair services to restore your damaged garments like new</p>
+                </div>
+                
+                <div class="service-card interactive-card bg-gradient-to-br from-indigo-700 to-indigo-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl border border-indigo-200">
+                    <div class="text-4xl mb-4 hover-scale cursor-pointer">👕</div>
+                    <h3 class="text-xl font-semibold mb-3">Laundry Service</h3>
+                    <p class="text-indigo-100">Complete washing and cleaning service for everyday clothing and fabrics</p>
+                </div>
+                
+                <div class="service-card interactive-card bg-gradient-to-br from-emerald-700 to-emerald-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl border border-emerald-200">
+                    <div class="text-4xl mb-4 hover-scale cursor-pointer">🔥</div>
+                    <h3 class="text-xl font-semibold mb-3">Ironing Service</h3>
+                    <p class="text-emerald-100">Both steam and normal ironing available for crisp, professional finish</p>
+                </div>
+                
+                <div class="service-card interactive-card bg-gradient-to-br from-cyan-700 to-cyan-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl border border-cyan-200">
+                    <div class="text-4xl mb-4 hover-scale cursor-pointer">✂️</div>
+                    <h3 class="text-xl font-semibold mb-3">Alterations</h3>
+                    <p class="text-cyan-100">Professional tailoring and alteration services for perfect fit</p>
+                </div>
+                
+                <div class="service-card interactive-card bg-gradient-to-br from-teal-700 to-teal-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl border border-teal-200">
+                    <div class="text-4xl mb-4 hover-scale cursor-pointer">🚚</div>
+                    <h3 class="text-xl font-semibold mb-3">Home Pickup & Drop</h3>
+                    <p class="text-teal-100">Convenient doorstep service - we collect and deliver your clothes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 section-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Competitive Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Transparent and affordable pricing with military precision and quality
+                </p>
+            </div>
+            
+            <!-- Men's Wear Section -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-slate-700 to-slate-900 text-white p-6 rounded-t-xl">
+                    <h3 class="text-2xl font-bold flex items-center justify-center">
+                        <span class="mr-3 text-3xl">👔</span> Men's Wear
+                    </h3>
+                </div>
+                <div class="bg-white border-2 border-slate-200 rounded-b-xl shadow-lg p-6">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Shirt</span><span class="font-bold text-blue-600">₹120</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">T-Shirt</span><span class="font-bold text-blue-600">₹100</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Trouser</span><span class="font-bold text-blue-600">₹120</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Jeans</span><span class="font-bold text-blue-600">₹120</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Cap</span><span class="font-bold text-blue-600">₹50</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Tie</span><span class="font-bold text-blue-600">₹60</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Sweater (Half)</span><span class="font-bold text-blue-600">₹150</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Sweater (Full)</span><span class="font-bold text-blue-600">₹250-₹300</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Sweat Shirt</span><span class="font-bold text-blue-600">₹200-₹300</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Coat/Blazer</span><span class="font-bold text-blue-600">₹300-₹500</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Coat Pent (2 Piece)</span><span class="font-bold text-blue-600">₹300-₹500</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Coat Pent (3 Piece)</span><span class="font-bold text-blue-600">₹400-₹600</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Over Coat</span><span class="font-bold text-blue-600">₹399-₹699</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Jacket (Half)</span><span class="font-bold text-blue-600">₹200-₹250</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Jacket (Full)</span><span class="font-bold text-blue-600">₹350-₹550</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Kurta Pajama</span><span class="font-bold text-blue-600">₹250-₹350</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Sherwani</span><span class="font-bold text-blue-600">₹499-₹1000</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Leather Jacket</span><span class="font-bold text-blue-600">₹399-₹1000</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+                            <span class="font-medium">Sweater (Long)</span><span class="font-bold text-blue-600">₹300-₹400</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Women's Wear Section -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-pink-600 to-purple-700 text-white p-6 rounded-t-xl">
+                    <h3 class="text-2xl font-bold flex items-center justify-center">
+                        <span class="mr-3 text-3xl">👗</span> Women's Wear
+                    </h3>
+                </div>
+                <div class="bg-white border-2 border-pink-200 rounded-b-xl shadow-lg p-6">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Jeans</span><span class="font-bold text-pink-600">₹120</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Sweater (Half)</span><span class="font-bold text-pink-600">₹150</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Sweater (Full)</span><span class="font-bold text-pink-600">₹250-₹350</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Top</span><span class="font-bold text-pink-600">₹100-₹150</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Blouse</span><span class="font-bold text-pink-600">₹70-₹150</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Skirt</span><span class="font-bold text-pink-600">₹150-₹300</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Dupatta</span><span class="font-bold text-pink-600">₹80-₹150</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Petticoat</span><span class="font-bold text-pink-600">₹100-₹150</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Stole</span><span class="font-bold text-pink-600">₹150-₹250</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Saree Only Check</span><span class="font-bold text-pink-600">₹70-₹100</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Saree Blouse Normal</span><span class="font-bold text-pink-600">₹250-₹300</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Saree with Work</span><span class="font-bold text-pink-600">₹400-₹800</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Shawl</span><span class="font-bold text-pink-600">₹200-₹500</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Garara Choli</span><span class="font-bold text-pink-600">₹200</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Kurta Suit</span><span class="font-bold text-pink-600">₹120-₹150</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Kurta Pajama (2 Piece)</span><span class="font-bold text-pink-600">₹200-₹300</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Kurta (Frok Suit)</span><span class="font-bold text-pink-600">₹250-₹300</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Kurta Pajama Dupatta</span><span class="font-bold text-pink-600">₹250-₹400</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Gown</span><span class="font-bold text-pink-600">₹350-₹1500</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Coat</span><span class="font-bold text-pink-600">₹300-₹500</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Over Coat</span><span class="font-bold text-pink-600">₹400-₹700</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Long Coat</span><span class="font-bold text-pink-600">₹500-₹800</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Jacket (Half Sleeve)</span><span class="font-bold text-pink-600">₹200-₹250</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Jacket (Full Sleeve)</span><span class="font-bold text-pink-600">₹250-₹400</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Lehenga (1 Piece)</span><span class="font-bold text-pink-600">₹300-₹500</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Lehenga (2 Piece)</span><span class="font-bold text-pink-600">₹500-₹1000</span>
+                        </div>
+                        <div class="flex justify-between p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="font-medium">Lehenga (3 Piece)</span><span class="font-bold text-pink-600">₹800-₹1500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Household Items & Others Section -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Household Items -->
+                <div>
+                    <div class="bg-gradient-to-r from-green-600 to-emerald-700 text-white p-6 rounded-t-xl">
+                        <h3 class="text-2xl font-bold flex items-center justify-center">
+                            <span class="mr-3 text-3xl">🏠</span> Household Items
+                        </h3>
+                    </div>
+                    <div class="bg-white border-2 border-green-200 rounded-b-xl shadow-lg p-6">
+                        <div class="grid gap-3">
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Pillow Cover</span><span class="font-bold text-green-600">₹50-₹150</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Bed Sheet (Single)</span><span class="font-bold text-green-600">₹120-₹200</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Bed Sheet (Double)</span><span class="font-bold text-green-600">₹200-₹300</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Blanket (Single)</span><span class="font-bold text-green-600">₹300-₹350</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Blanket (Double)</span><span class="font-bold text-green-600">₹400-₹450</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Quilt (Single)</span><span class="font-bold text-green-600">₹350-₹400</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Quilt (Double)</span><span class="font-bold text-green-600">₹400-₹500</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Curtain (Without Lining)</span><span class="font-bold text-green-600">₹150/piece</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Curtain (With Lining)</span><span class="font-bold text-green-600">₹200/piece</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Curtain (Velvet)</span><span class="font-bold text-green-600">₹250/piece</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Sofa Sheet (Fabric)</span><span class="font-bold text-green-600">₹250</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                                <span class="font-medium">Carpet (per sq ft)</span><span class="font-bold text-green-600">₹25-₹35</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Others & Services -->
+                <div>
+                    <div class="bg-gradient-to-r from-orange-600 to-red-600 text-white p-6 rounded-t-xl">
+                        <h3 class="text-2xl font-bold flex items-center justify-center">
+                            <span class="mr-3 text-3xl">⚡</span> Others & Services
+                        </h3>
+                    </div>
+                    <div class="bg-white border-2 border-orange-200 rounded-b-xl shadow-lg p-6">
+                        <div class="grid gap-3">
+                            <div class="flex justify-between p-3 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors">
+                                <span class="font-medium">Shoes/Sandals</span><span class="font-bold text-orange-600">₹300-₹400</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors">
+                                <span class="font-medium">Bags</span><span class="font-bold text-orange-600">₹200-₹400</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors">
+                                <span class="font-medium">Teddy Bear (Up to 3 Feet)</span><span class="font-bold text-orange-600">₹300</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors">
+                                <span class="font-medium">Teddy Bear (4-7 Feet)</span><span class="font-bold text-orange-600">₹500-₹1000</span>
+                            </div>
+                            
+                            <!-- Ironing Services Section -->
+                            <div class="border-t-2 border-orange-200 pt-4 mt-4">
+                                <div class="text-center font-bold text-orange-700 mb-3 text-lg">🔥 IRONING SERVICES</div>
+                                <div class="flex justify-between p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition-colors border border-yellow-200">
+                                    <span class="font-medium">Normal Iron</span><span class="font-bold text-yellow-600">₹15/piece</span>
+                                </div>
+                                <div class="flex justify-between p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition-colors border border-yellow-200 mt-2">
+                                    <span class="font-medium">Steam Iron</span><span class="font-bold text-yellow-600">₹30/piece</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 section-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Work Gallery</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    See the quality of our professional dry cleaning services with military precision
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer hover-glow">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Clean pressed clothes hanging" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h4 class="text-lg font-semibold mb-2">Fresh Clean Clothes</h4>
+                            <p class="text-sm">Perfectly cleaned and pressed garments</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer hover-glow">
+                    <img src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional dry cleaning machine" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h4 class="text-lg font-semibold mb-2">Modern Equipment</h4>
+                            <p class="text-sm">Industrial grade cleaning machines</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer hover-glow">
+                    <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Neatly folded clean laundry" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h4 class="text-lg font-semibold mb-2">Perfect Folding</h4>
+                            <p class="text-sm">Neatly packaged clean clothes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer hover-glow">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional ironing service" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h4 class="text-lg font-semibold mb-2">Expert Ironing</h4>
+                            <p class="text-sm">Steam and normal ironing services</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer hover-glow">
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dry cleaning chemicals and process" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h4 class="text-lg font-semibold mb-2">Professional Process</h4>
+                            <p class="text-sm">Safe and effective cleaning methods</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer hover-glow">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Quality garment care and inspection" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h4 class="text-lg font-semibold mb-2">Quality Inspection</h4>
+                            <p class="text-sm">Thorough quality checks before delivery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 section-bg">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Why Choose Fauji Dry Cleaners?</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Located in the heart of Najafgarh, Fauji Dry Cleaners brings military precision and discipline to professional garment care. Under the expert guidance of Pinky Ruhil, we ensure every garment receives the meticulous attention it deserves.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Our commitment to excellence, reliability, and customer satisfaction has made us the trusted choice for dry cleaning services in the area. We serve with honor and dedication.
+                    </p>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4 p-4 bg-white border-l-4 border-blue-600 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <div class="text-2xl">⏰</div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">Quick Turnaround</h4>
+                            <p class="text-slate-600">4-5 days delivery time with precision</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4 p-4 bg-white border-l-4 border-green-600 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <div class="text-2xl">🏆</div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">Expert Care</h4>
+                            <p class="text-slate-600">Military-grade attention to detail</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4 p-4 bg-white border-l-4 border-yellow-600 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <div class="text-2xl">🚚</div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">Home Service</h4>
+                            <p class="text-slate-600">Free pickup and delivery service</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4 p-4 bg-white border-l-4 border-indigo-600 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <div class="text-2xl">💰</div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">Affordable Rates</h4>
+                            <p class="text-slate-600">Competitive pricing with quality assurance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4 p-4 bg-white border-l-4 border-red-600 rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <div class="text-2xl">🕘</div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">Always Open</h4>
+                            <p class="text-slate-600">9 AM - 9 PM, All 7 days - Always ready to serve</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 section-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Contact us for professional dry cleaning services with military precision in Najafgarh
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-slate-700 to-slate-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transform hover:scale-105 transition-all border border-red-400 interactive-card cursor-pointer">
+                    <div class="text-4xl mb-4 hover-scale">📍</div>
+                    <h3 class="text-xl font-semibold mb-3">Visit Us</h3>
+                    <p class="text-slate-200">
+                        Main Dharampura Road,<br>
+                        Chhawla Stand,<br>
+                        Near Aggarwal Sweets,<br>
+                        Najafgarh, New Delhi-110043
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-700 to-blue-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transform hover:scale-105 transition-all border border-green-400 interactive-card cursor-pointer">
+                    <div class="text-4xl mb-4 hover-scale">📞</div>
+                    <h3 class="text-xl font-semibold mb-3">Call Us</h3>
+                    <p class="text-blue-100">
+                        <strong class="text-yellow-300 cursor-pointer hover:text-yellow-200">8076656649</strong><br>
+                        <strong class="text-yellow-300 cursor-pointer hover:text-yellow-200">9933443177</strong><br>
+                        Available 9 AM - 9 PM<br>
+                        All 7 days a week
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-700 to-green-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transform hover:scale-105 transition-all border border-blue-400 interactive-card cursor-pointer">
+                    <div class="text-4xl mb-4 hover-scale">✉️</div>
+                    <h3 class="text-xl font-semibold mb-3">Email Us</h3>
+                    <p class="text-green-100">
+                        <strong class="text-yellow-300 cursor-pointer hover:text-yellow-200">pinkiruhil3@gmail.com</strong><br>
+                        For inquiries and bookings<br>
+                        We'll respond within 24 hours
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-gray-700 to-gray-900 text-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transform hover:scale-105 transition-all border border-yellow-400 interactive-card cursor-pointer">
+                    <div class="text-4xl mb-4 hover-scale">👤</div>
+                    <h3 class="text-xl font-semibold mb-3">Owner</h3>
+                    <p class="text-gray-200">
+                        <strong class="text-yellow-300">Pinky Ruhil</strong><br>
+                        Experienced professional<br>
+                        Committed to excellence
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-slate-900 via-gray-900 to-slate-900 text-white py-12 border-t-4 border-yellow-400">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-12 h-12 military-logo rounded-lg flex items-center justify-center shadow-lg floating-animation pulse-glow hover-rotate cursor-pointer">
+                    <svg class="w-8 h-8 text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
+                        <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-2xl font-bold">Fauji Dry Cleaners</span>
+                    <div class="text-sm text-yellow-300 font-medium">Professional Military Precision</div>
+                </div>
+            </div>
+            <p class="text-gray-300 mb-2">
+                &copy; 2024 Fauji Dry Cleaners. All rights reserved. | Professional Dry Cleaning Services in Najafgarh, Delhi
+            </p>
+            <p class="text-yellow-300 font-semibold">Honor • Precision • Excellence • Service</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-white/95', 'backdrop-blur-sm');
+            } else {
+                header.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and other elements
+        document.querySelectorAll('.service-card, .bg-gray-50 > div, .bg-white > div').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99306b4221a2a6dc',t:'MTc2MTIxMzk1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
